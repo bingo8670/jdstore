@@ -69,7 +69,8 @@ gem 'qiniu-rs'
 #密码管理
 gem 'figaro'
 
-
+#网页浏览量
+gem 'impressionist'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
