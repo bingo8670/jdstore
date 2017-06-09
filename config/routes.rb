@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   namespace :admin do
 
     resources :products do
@@ -20,7 +21,8 @@ Rails.application.routes.draw do
   end
 
   devise_for :users
-
+  
+  mount ChinaCity::Engine => '/china_city'
   root 'welcome#index'
 
   resources :products do
