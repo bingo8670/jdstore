@@ -1,103 +1,202 @@
-<html>
-  <head>
-    <!-- Add this css File in head tag-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
-  </head>
+<div class="welcome-box">
+  <!--===== 广告轮播 =====-->
+  <section class="intro-box">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="intro" class="carousel slide" data-ride="carousel">
+          <!--===== 轮播按钮 =====-->
+          <ol class="carousel-indicators">
+            <li data-target="#intro" data-slide-to="0" class="active"></li>
+            <li data-target="#intro" data-slide-to="1"></li>
+            <li data-target="#intro" data-slide-to="2"></li>
+          </ol>
 
-  <body>
-    <div id="bootstrap-touch-slider" class="carousel bs-slider slide  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000">
-
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
-        <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
-        <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-
-          <img src="http://oqr2tkodq.bkt.clouddn.com/header.jpg" alt="Bootstrap Touch Slider" class="slide-image"/>
-          <div class="bs-slider-overlay"></div>
-
-          <div class="container">
-            <div class="row">
-              <!-- Slide Text Layer -->
-              <div class="slide-text slide_style_left">
-                <h1 data-animation="animated zoomInRight">邻里信息共享 让我们互帮互助 生活幸福
-                </h1>
-                <p data-animation="animated fadeInLeft">希望借由这个网站，让大家找到邻里间可靠的资源。
-                  <br>
-                  照顾好家人，让生活幸福安心！</p>
-                <!-- <a href="http://bootstrapthemes.co/" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">select one</a>
-                                  <a href="http://bootstrapthemes.co/" target="_blank"  class="btn btn-primary" data-animation="animated fadeInRight">select two</a> -->
-
-              </div>
+          <!--===== 轮播内容 =====-->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <%= link_to '#', target: "_blank" do %> <!-- 图片连结，点击另开视窗 -->
+                <%= image_tag("intro_1.jpg") %> <!-- 图片位置 -->
+                <div class="carousel-caption">
+                  <h3>书籍分享</h3> <!-- 标题 -->
+                  <p>希望大家都能找到想要的书</p> <!-- 内文 -->
+                </div>
+              <% end %>
+            </div>
+            <div class="item">
+              <%= link_to '#', target: "_blank" do %>
+                <%= image_tag("intro_2.jpg") %>
+                <div class="carousel-caption">
+                  <h3>让你花最少的钱</h3>
+                  <p>看大量的有内涵的书</p>
+                </div>
+              <% end %>
+            </div>
+            <div class="item">
+              <%= link_to '#', target: "_blank" do %>
+                <%= image_tag("intro_3.jpg") %>
+                <div class="carousel-caption">
+                  <h3>希望借这个平台</h3>
+                  <p>让我们认识更多志同道合的朋友</p>
+                </div>
+              <% end %>
             </div>
           </div>
+
+          <!--===== 换页按钮 =====-->
+          <a class="left carousel-control" href="#intro" role="button" data-slide="prev">
+            <span class="fa fa-angle-left" aria-hidden="true"></span> <!-- 左侧按钮图示 -->
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#intro" role="button" data-slide="next">
+            <span class="fa fa-angle-right" aria-hidden="true"></span> <!-- 右侧按钮图示 -->
+            <span class="sr-only">Next</span>
+          </a>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="item">
 
-          <!-- Slide Background -->
-          <img src="http://oqr2tkodq.bkt.clouddn.com/pic-2.jpg" alt="Bootstrap Touch Slider" class="slide-image"/>
-          <div class="bs-slider-overlay"></div>
-          <!-- Slide Text Layer -->
-          <div class="slide-text slide_style_center">
-            <h1 data-animation="animated flipInX">有时候我们三头六臂</h1>
-            <p data-animation="animated lightSpeedIn">忙得团团转<br>
-              却还是手忙脚乱</p>
-            <!-- <a href="http://bootstrapthemes.co/" target="_blank" class="btn btn-default" data-animation="animated fadeInUp">select one</a>
-                                  <a href="http://bootstrapthemes.co/" target="_blank"  class="btn btn-primary" data-animation="animated fadeInDown">select two</a>
-                                   -->
+  <!--===== 推荐商品 =====-->
+  <section class="show-box">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h2>推荐书目</h2> <!-- 副标题 -->
+        <div class="short-line"></div> <!-- 分隔线 -->
+        <div class="row">
+          <div class="col-md-4">
+            <%= link_to '#' do %> <!-- 商品连结 -->
+              <div class="box"><img src="http://oqr2tkodq.bkt.clouddn.com/%E4%B9%96%EF%BC%8C%E6%91%B8%E6%91%B8%E5%A4%B4.jpg" /></div> <!-- 商品图片 -->
+              <div class="content">
+                <p>乖摸摸头</p> <!-- 商品名称 -->
+                <p>$10</p> <!-- 商品价格 -->
+              </div>
+            <% end %>
           </div>
-        </div>
-
-        <div class="item">
-
-          <!-- Slide Background -->
-          <img src="http://oqr2tkodq.bkt.clouddn.com/pic-3.jpg" alt="Bootstrap Touch Slider" class="slide-image"/>
-          <div class="bs-slider-overlay"></div>
-          <!-- Slide Text Layer -->
-          <div class="slide-text slide_style_right">
-            <h1 data-animation="animated zoomInLeft">希望借这个平台</h1>
-            <p data-animation="animated fadeInRight">让我们 照顾好家人</p>
-            <!-- <a href="http://bootstrapthemes.co/" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">select one</a>
-                          <a href="http://bootstrapthemes.co/" target="_blank" class="btn btn-primary" data-animation="animated fadeInRight">select two</a>
-                           注释掉的可以添加按钮，但是目前不知道能用来干嘛，后面迭代再做。-->
+          <div class="col-md-4">
+            <%= link_to '#' do %>
+              <div class="box"><img src="http://oqr2tkodq.bkt.clouddn.com/%E5%A5%BD%E5%90%97%E5%A5%BD%E7%9A%84.jpg" /></div>
+              <div class="content">
+                <p>好吗好的</p>
+                <p>$10</p>
+              </div>
+            <% end %>
+          </div>
+          <div class="col-md-4">
+            <%= link_to '#' do %>
+              <div class="box"><img src="http://oqr2tkodq.bkt.clouddn.com/%E9%98%BF%E5%BC%A5%E9%99%80%E4%BD%9B%E4%B9%88%E4%B9%88%E5%93%92.jpg" /></div>
+              <div class="content">
+                <p>阿弥陀佛么么哒</p>
+                <p>$10</p>
+              </div>
+            <% end %>
+          </div>
+          <div class="col-md-4">
+            <%= link_to '#' do %>
+              <div class="box"><img src="http://oqr2tkodq.bkt.clouddn.com/%E4%B8%89%E4%BD%93.jpg" /></div>
+              <div class="content">
+                <p>三体</p>
+                <p>$10</p>
+              </div>
+            <% end %>
+          </div>
+          <div class="col-md-4">
+            <%= link_to('立即购买', products_path, class:'btn btn-push' ) %>
+          </div>
+          <div class="col-md-4">
+            <%= link_to '#' do %>
+              <div class="box"><img src="http://oqr2tkodq.bkt.clouddn.com/%E9%87%91%E5%9C%A3%E5%8F%B9%E8%AF%84%E6%B0%B4%E6%B5%92.jpg" /></div>
+              <div class="content">
+                <p>金圣叹评水浒</p>
+                <p>$10</p>
+              </div>
+            <% end %>
+          </div>
+          <div class="col-md-4">
+            <%= link_to '#' do %>
+              <div class="box"><img src="http://oqr2tkodq.bkt.clouddn.com/%E7%99%BD%E5%A4%9C%E8%A1%8C.jpg" /></div>
+              <div class="content">
+                <p>白夜行</p>
+                <p>$10</p>
+              </div>
+            <% end %>
+          </div>
+          <div class="col-md-4">
+            <%= link_to '#' do %>
+              <div class="box"><img src="http://oqr2tkodq.bkt.clouddn.com/%E8%A7%A3%E5%BF%A7%E6%9D%82%E8%B4%A7%E5%BA%97.jpg" /></div>
+              <div class="content">
+                <p>解忧杂货店</p>
+                <p>$10</p>
+              </div>
+            <% end %>
+          </div>
+          <div class="col-md-4">
+            <%= link_to '#' do %>
+              <div class="box"><img src="http://oqr2tkodq.bkt.clouddn.com/%E5%AB%8C%E7%96%91%E4%BA%BAX%E7%9A%84%E7%8C%AE%E8%BA%AB.jpg" /></div>
+              <div class="content">
+                <p>嫌疑人X的献身</p>
+                <p>$10</p>
+              </div>
+            <% end %>
           </div>
         </div>
       </div>
-
-      <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
-
-        <span class="fa fa-angle-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-
-      <!-- Right Control -->
-      <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
-        <span class="fa fa-angle-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-
     </div>
-    <!-- End  bootstrap-touch-slider Slider -->
-  </body>
-  <!-- Script to Activate the Carousel -->
-  <script>
-    $('.carousel').carousel({
-      interval: 5000 //定义轮播显示的速度，可以调整
-    })
-    $('#bootstrap-touch-slider').bsTouchSlider();
-  </script>
+  </section>
 
-  <script>
-    $(document).ready(function () {
-      $('.material-button-toggle').click(function () {
-        $(this).toggleClass('open');
-        $('.option').toggleClass('scale-on');
-      });
-    });
-  </script>
-</html>
+  <!--===== 用户反馈 =====-->
+  <section class="feedback-box">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h2>用户反馈</h2> <!-- 副标题 -->
+        <div class="short-line"></div> <!-- 分隔线 -->
+        <div id="feedback" class="carousel slide" data-ride="carousel">
+          <!--===== 轮播按钮 =====-->
+          <ol class="carousel-indicators">
+            <li data-target="#feedback" data-slide-to="0" class="active"></li>
+            <li data-target="#feedback" data-slide-to="1"></li>
+            <li data-target="#feedback" data-slide-to="2"></li>
+          </ol>
+
+          <!--===== 轮播内容 =====-->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <p>这是我用过最好的读书网站，书目众多、下单方便、送货快速，强力推荐。</p>
+              <%= image_tag("feedback_1.png") %> <!-- 图片 -->
+              <strong>Eddie - 上班族</strong> <!-- 介绍 -->
+            </div>
+            <div class="item">
+              <p>我是这网站的忠实用户，已经在这买好几年了，质量一直很好，而且不定时会有折扣，真的很划算！</p>
+              <%= image_tag("feedback_2.png") %>
+              <strong>Anna - 家庭主妇</strong>
+            </div>
+            <div class="item">
+              <p>身为一个学生，预算不太多，却也能在这找到便宜又有价值的好书，让我生活又添加一份乐趣。</p>
+              <%= image_tag("feedback_3.png") %>
+              <strong>Kobe - 大学生</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--===== 合作品牌 =====-->
+  <section class="brand-box">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h2>合作品牌</h2> <!-- 副标题 -->
+        <div class="short-line"></div> <!-- 分隔线 -->
+        <%= image_tag("brand_1.png") %> <!-- 品牌图片 -->
+        <%= image_tag("brand_5.png") %>
+        <%= image_tag("brand_3.png") %>
+        <%= image_tag("brand_4.png") %>
+        <%= image_tag("brand_2.png") %>
+
+        <%= image_tag("brand_6.png") %>
+        <%= image_tag("brand_7.png") %>
+        <%= image_tag("brand_8.png") %>
+      </div>
+    </div>
+  </section>
+</div>
