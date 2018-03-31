@@ -1,24 +1,53 @@
 # README
+## 上线网址
+https://booksmark.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 使用到的gem
+- 账号系统
+gem 'devise'
 
-Things you may want to cover:
+- 前端框架
+gem 'bootstrap-sass'
 
-* Ruby version
+- 表格/图标/分页
+gem 'simple_form'
+gem 'font-awesome-rails'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 
-* System dependencies
+- 记录schema for model
+gem 'annotate'
 
-* Configuration
+- 图片功能
+gem 'carrierwave'
+gem 'mini_magick'
 
-* Database creation
+- 订单信息提醒
+gem 'letter_opener', group: :development
 
-* Database initialization
+- 订单状态
+gem 'aasm'
 
-* How to run the test suite
+- 客服系统
+gem "intercom-rails"
 
-* Services (job queues, cache servers, search engines, etc.)
+- 搜索功能
+gem 'ransack'
+gem 'seo_helper'
 
-* Deployment instructions
 
-* ...
+- 后台商品排序
+gem 'acts_as_list'
+
+- 七牛图片存储
+gem 'carrierwave-qiniu'
+gem 'qiniu-rs'
+
+- 密码管理
+gem 'figaro'
+
+- 网页浏览量
+gem 'impressionist'
+
+- 邮寄地址
+gem 'china_city'
